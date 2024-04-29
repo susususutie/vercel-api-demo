@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    hello world
+
+    <button>fetch</button>
+    <ul></ul>
+    <script>
+      const button = document.querySelector("button");
+      const list = document.querySelector("ul");
+      button.addEventListener("click", () => {
+        button.disabled = true;
+        fetch("./api/hello")
+          .then((res) => res.text())
+          .then((res) => {
+            const item = document.createElement("li");
+            console.log(res);
+            item.textContent = res;
+            list.appendChild(item);
+          })
+          .finally(() => {
+            button.disabled = false;
+          });
+      });
+    </script>
+  </body>
+</html>

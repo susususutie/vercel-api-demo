@@ -1,0 +1,15 @@
+{
+  "name": "vercel-api-demo",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@vercel/node": "^3.0.27",
+    "typescript": "^5.4.5"
+  }
+}
