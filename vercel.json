@@ -1,3 +1,8 @@
 {
-  "redirects": [{ "source": "/", "destination": "/api/hello", "permanent": false }]
+  "functions": {
+    "api/hello.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
 }
